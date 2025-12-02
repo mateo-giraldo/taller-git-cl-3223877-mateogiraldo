@@ -4,5 +4,6 @@ function agregarItem(texto) {
   li.textContent = texto;
   lista.appendChild(li);
 }
+module.exports = { agregarItem, suma };
 
 console.log("App lista");
