@@ -6,4 +6,4 @@ function agregarItem(texto) {
 }
 module.exports = { agregarItem, suma };
 
-console.log("App lista");
+console.log('App lista');
