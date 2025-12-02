@@ -1,5 +1,8 @@
-const suma = (a, b) => a + b;
-
-test('Suma de dos números', () => {
-  expect(suma(2, 3)).toBe(5);
+import test from 'node:test';
+import assert from 'node:assert/strict';
+function suma(a, b) {
+  return a + b;
+}
+test('suma 2 + 3 = 5', () => {
+  assert.equal(suma(2, 3), 5);
 });

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, feat/*] # agregamos ramas de features también
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
+
+      - name: Lint (Prettier)
+        run: npx prettier . --check
+
+      - name: Run Tests
+        run: |
+          if [ -d tests ]; then
+            npm test
+          else
+            echo "No tests directory, skipping tests"
+          fi

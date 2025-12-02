@@ -1,0 +1,27 @@
+{
+  "name": "taller-git-cl-3223877-mateogiraldo",
+  "version": "1.0.0",
+  "description": "Este es mi primer taller con Git y CI.",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateo-giraldo/taller-git-cl-3223877-mateogiraldo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateo-giraldo/taller-git-cl-3223877-mateogiraldo/issues"
+  },
+  "homepage": "https://github.com/mateo-giraldo/taller-git-cl-3223877-mateogiraldo#readme"
+}
